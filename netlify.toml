@@ -1,0 +1,5 @@
+# Static site: no build step needed. Serve files from the repository root.
+[build]
+  base = "."
+  publish = "."
+  command = ""
