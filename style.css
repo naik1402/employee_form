@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+/* ── Reset & base ─────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 40px 32px;
+  min-height: 100vh;
+}
+
+/* ── Layout container ─────────────────────────────── */
+.container {
+  max-width: 920px;
+}
+
+/* ── Section headings ─────────────────────────────── */
+h2 {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0 0 28px 0;
+}
+
+/* ── Form section ─────────────────────────────────── */
+.form-section {
+  margin-bottom: 48px;
+}
+
+.fields-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 600px) {
+  .fields-row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+label {
+  font-size: 13px;
+  font-weight: 400;
+  color: #ffffff;
+  letter-spacing: 0.01em;
+}
+
+input {
+  background: #000000;
+  border: 1.5px solid #2a2a2a;
+  border-radius: 4px;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 15px;
+  height: 48px;
+  outline: none;
+  padding: 0 14px;
+  transition: border-color 0.15s;
+  width: 100%;
+}
+
+input:focus {
+  border-color: #666666;
+}
+
+/* ── Add button ───────────────────────────────────── */
+.add-btn {
+  background: #ffffff;
+  border: none;
+  border-radius: 4px;
+  color: #000000;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 500;
+  height: 54px;
+  min-width: 160px;
+  padding: 0 32px;
+  transition: opacity 0.15s;
+}
+
+.add-btn:hover {
+  opacity: 0.85;
+}
+
+.add-btn:active {
+  opacity: 0.7;
+}
+
+/* ── Status messages ──────────────────────────────── */
+.status-msg {
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 16px;
+  min-height: 24px;
+}
+
+.status-msg.error {
+  color: #ff4444;
+}
+
+.status-msg.success {
+  color: #22c55e;
+}
+
+/* ── Employee list ────────────────────────────────── */
+.empty-msg {
+  color: #888888;
+  font-size: 15px;
+  margin: 0;
+}
+
+.employee-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* ── Employee card ────────────────────────────────── */
+.employee-card {
+  align-items: center;
+  border: 1.5px solid #2a2a2a;
+  border-radius: 10px;
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  padding: 16px 20px;
+  animation: slideIn 0.2s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.employee-info {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  min-width: 0;
+}
+
+.employee-num {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 500;
+  min-width: 20px;
+}
+
+.employee-field {
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.employee-field span {
+  color: #888888;
+}
+
+/* ── Delete button ────────────────────────────────── */
+.delete-btn {
+  background: transparent;
+  border: 1.5px solid #2a2a2a;
+  border-radius: 20px;
+  color: #ffffff;
+  cursor: pointer;
+  flex-shrink: 0;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 8px 20px;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+  white-space: nowrap;
+}
+
+.delete-btn:hover {
+  background: rgba(255, 68, 68, 0.08);
+  border-color: #ff4444;
+  color: #ff4444;
+}

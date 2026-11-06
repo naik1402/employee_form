@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Form Section -->
+    <section class="form-section">
+      <h2>New Employees</h2>
+
+      <div class="fields-row">
+        <div class="field-group">
+          <label for="name">Enter Name</label>
+          <input type="text" id="name" autocomplete="off">
+        </div>
+        <div class="field-group">
+          <label for="profession">Enter Profession</label>
+          <input type="text" id="profession" autocomplete="off">
+        </div>
+        <div class="field-group">
+          <label for="age">Enter Age</label>
+          <input type="number" id="age" min="1" max="120" autocomplete="off">
+        </div>
+      </div>
+
+      <button class="add-btn" onclick="addEmployee()">Add User</button>
+
+      <div class="status-msg" id="statusMsg" aria-live="polite"></div>
+    </section>
+
+    <!-- List Section -->
+    <section class="list-section">
+      <h2>Added Employees</h2>
+      <div id="employeeContainer">
+        <p class="empty-msg" id="emptyMsg">You have 0 Employees.</p>
+        <div class="employee-list" id="employeeList"></div>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
